@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.grid-background {
+  background-size: 100% 32px;
+  background-image: linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
+}
+
+/* Custom Form Styles */
+@layer components {
+  .form-input {
+    @apply block w-full px-4 py-3 rounded-lg border border-gray-300 
+           bg-white text-gray-900
+           shadow-sm transition-all duration-200
+           hover:border-gray-400
+           focus:border-blue-500 focus:ring-2 focus:ring-blue-100 focus:outline-none;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 mb-2;
+  }
+
+  .form-select {
+    @apply block w-full px-4 py-3 rounded-lg border border-gray-300 
+           bg-white text-gray-900
+           shadow-sm transition-all duration-200
+           hover:border-gray-400
+           focus:border-blue-500 focus:ring-2 focus:ring-blue-100 focus:outline-none
+           appearance-none bg-no-repeat bg-right pr-10;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-size: 1.5em 1.5em;
+  }
+
+  .form-group {
+    @apply mb-4 relative;
+  }
+
+  /* Add focus styles for form groups */
+  .form-group:focus-within .form-label {
+    @apply text-blue-600;
+  }
+
+  /* Style checkboxes */
+  input[type="checkbox"] {
+    @apply w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300
+           focus:ring-blue-500 focus:ring-2 focus:ring-offset-0
+           transition-all duration-200
+           hover:border-blue-500;
+  }
+
+  /* Style radio buttons */
+  input[type="radio"] {
+    @apply w-4 h-4 text-blue-600 bg-gray-100 border-gray-300
+           focus:ring-blue-500 focus:ring-2 focus:ring-offset-0
+           transition-all duration-200
+           hover:border-blue-500;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
