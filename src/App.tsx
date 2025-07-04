@@ -5,6 +5,7 @@ import { TimeTrackingPage } from './components/timetracking/TimeTrackingPage';
 import { DashboardPage } from './components/dashboard/DashboardPage';
 import { EmployeesPage } from './components/employees/EmployeesPage';
 import { ClientsPage } from './components/clients/ClientsPage';
+import { ProspectsPage } from './components/prospects/ProspectsPage';
 import { RoutePlanningPage } from './components/route-planning/RoutePlanningPage';
 import { CommunicationPage } from './components/communication/CommunicationPage';
 import { DocumentationPage } from './components/documentation/DocumentationPage';
@@ -12,11 +13,12 @@ import { ServicesPage } from './components/services/ServicesPage';
 import { FinancesPage } from './components/finances/FinancesPage';
 import { SettingsPage } from './components/settings/SettingsPage';
 
-export type ViewType = 
-  | 'dashboard' 
-  | 'employees' 
-  | 'clients' 
-  | 'calendar' 
+export type ViewType =
+  | 'dashboard'
+  | 'employees'
+  | 'clients'
+  | 'prospects'
+  | 'calendar'
   | 'timetracking'
   | 'route-planning'
   | 'communication'
@@ -35,6 +37,7 @@ export default function App() {
         {currentView === 'dashboard' && <DashboardPage />}
         {currentView === 'employees' && <EmployeesPage />}
         {currentView === 'clients' && <ClientsPage />}
+        {currentView === 'prospects' && <ProspectsPage />}
         {currentView === 'calendar' && <CalendarView />}
         {currentView === 'timetracking' && <TimeTrackingPage />}
         {currentView === 'route-planning' && <RoutePlanningPage />}
