@@ -1,9 +1,10 @@
 import React from 'react';
 import { 
-  Calendar, 
-  Users, 
-  User, 
-  Euro, 
+  Calendar,
+  Users,
+  User,
+  UserPlus,
+  Euro,
   Settings, 
   LayoutGrid, 
   FileText,
@@ -45,17 +46,25 @@ export function Sidebar({ onNavigate, currentView }: SidebarProps) {
         >
           Mitarbeiter
         </NavLink>
-        <NavLink 
-          icon={<User size={20} />} 
-          href="#" 
+        <NavLink
+          icon={<User size={20} />}
+          href="#"
           active={currentView === 'clients'}
           onClick={() => onNavigate('clients')}
         >
           KlientInnen
         </NavLink>
-        <NavLink 
-          icon={<Calendar size={20} />} 
-          href="#" 
+        <NavLink
+          icon={<UserPlus size={20} />}
+          href="#"
+          active={currentView === 'prospects'}
+          onClick={() => onNavigate('prospects')}
+        >
+          Interessenten
+        </NavLink>
+        <NavLink
+          icon={<Calendar size={20} />}
+          href="#"
           active={currentView === 'calendar'}
           onClick={() => onNavigate('calendar')}
         >
